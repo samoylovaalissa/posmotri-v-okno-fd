@@ -10,10 +10,8 @@ html {
 
 .page {
   display: flex;
-  height: 100%;
   inline-size: 1200px;
   block-size: 100%;
-  box-sizing: border-box;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -45,43 +43,40 @@ ol {
 
 .content {
   display: flex;
-  flex-direction: row;
   gap: 30px;
-  align-content: flex-end;
+  align-items: center;
   justify-content: center;
   min-width: 1140px;
-  min-height: 534px;
 }
 
 
 .result {
   display: flex;
   flex-direction: column;
-  min-width: 711px;
-  min-height: 386px;
-  box-sizing: border-box;
-  justify-content: space-evenly;
-
+  align-items: center;
+  gap: 24px;
 }
 
 .result__video-container {
   object-fit: cover;
-  margin-bottom: 16px;
-  margin-top: 70px;
-  min-width: 711px;
+  object-position: bottom;
   height: 386px;
   width: 100%;
   position: relative;
+  margin-top: 65px;
+
 }
 
 input {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: transparent;
   border-bottom: solid white 1px;
   border-top: solid white 1px;
   color: #fff;
   min-width: 225px;
+  border-left: none;
+  border-right: none;
 }
 
 .search-form__textfield {
@@ -98,22 +93,22 @@ input {
 
 .result__video {
   min-width: 711px;
-  min-height: 386px;
   object-fit: cover;
+  object-position: top right;
+  height: 386px;
+  padding: 0;
 }
 
 .search-form {
   display: flex;
   flex-direction: row;
   gap: 40px;
-  box-sizing: border-box;
-  min-width: 711px;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
@@ -127,13 +122,19 @@ input {
   cursor: pointer;
 }
 
-.search-form__label:has(:focus-visible) {
- outline: solid white 1px;
+.search-form__fieldset {
+  border: none;
 }
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
 
 .title {
   margin-bottom: 26px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   line-height: 0.94;
@@ -179,15 +180,11 @@ input {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 390px;
-  overflow-x: hidden;
 }
 
 .content__list-item {
   width: 100%;
-  min-height: 103px;
   padding: 0 3px 0 3px;
-  cursor: pointer;
 
 }
 
@@ -198,37 +195,36 @@ input {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  gap: 30px;
   flex-grow: 1;
 
 }
 
 .content__video-card-title {
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 196px;
 }
 
 .content__card-link {
-  object-fit: cover;
-  object-position: center;
-  display: flex;
   text-decoration: none;
   color: #fff;
+  display: block;
 }
 
 .content__video-card-thumbnail {
   object-fit: cover;
-  object-position: center;
+  object-position: left 1px top 2px;
   width: 194px;
   height: 103px;
 }
 
 .content__video-card-description {
-  line-height: 16.2pt;
+  line-height: 1.162;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;  
   white-space: nowrap;
@@ -253,17 +249,8 @@ input {
   white-space: nowrap;
 }
 
-.search-form__fieldset {
-  border: none;
-}
-
-.search-form__checkbox-list {
-  display: flex;
-  gap: 15px;
-}
-
 .button {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: bold;
   font-size: 18px;
   background-color: transparent;
@@ -275,6 +262,7 @@ input {
 .search-form__submit-button {
   align-self:last baseline;
   min-width: 194px;
+  padding: 6px 73px 6px 73px;
 }
 
 .button:hover {
@@ -327,26 +315,18 @@ input {
   outline: solid white 1px;
 }
 
-.content__card-link {
-  display: block;
-}
-
 .content__card-link_current {
-  background: rgb(217 217 217 / 10%);
+  background-color: #545050;
 }
 
-.content__card-link_current:active {
- background: rgb(217 217 217 / 10%);
-}
-
-.content__card-link_current:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__card-link_current:focus {
+.content__card-link:focus {
   border: none;
 }
 
-.content__card-link_current:focus-visible {
+.content__card-link:focus-visible {
   outline: solid white 1px;
 }
