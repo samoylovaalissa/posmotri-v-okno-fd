@@ -1,3 +1,7 @@
+/* спасибо за ваши комментарии и оперативную проверку! с вамим ревью очень комфортно работать */
+
+
+
 *,
 *::before,
 *::after {
@@ -311,7 +315,7 @@ input {
   opacity: 1;
 }
 
-.search-form__label:has(:hover) {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -328,7 +332,7 @@ input {
 }
 
 .content__card-link:active {
-  background: rgb(217 217 217 / 10%); 
+  background: #545050; 
 }
 
 .content__card-link:focus {
